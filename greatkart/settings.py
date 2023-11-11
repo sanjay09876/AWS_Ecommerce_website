@@ -29,7 +29,7 @@ SECRET_KEY = '9%u8&%6osr^gghji$@8j!(o6-an_93350g)xg84&d2u&=+992_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # True
 
-ALLOWED_HOSTS = ['greatkart-django-env.eba-ie4cic8g.us-west-2.elasticbeanstalk.com','*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
