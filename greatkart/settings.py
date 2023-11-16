@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 SECRET_KEY = '9%u8&%6osr^gghji$@8j!(o6-an_93350g)xg84&d2u&=+992_'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True # True
+DEBUG = False # True
 
 ALLOWED_HOSTS = ['django-project-env.eba-ggcs4vqy.ca-central-1.elasticbeanstalk.com','*']
 
@@ -199,5 +199,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "sanjaysan648@gmail.com"
 EMAIL_HOST_PASSWORD = 'chtb bxsf esoh xjwv'
-DEFAULT_FROM_EMAIL = 'Team Enduro <sanjaysan648@gmail.com>'
+DEFAULT_FROM_EMAIL = 'Team CloudKart <sanjaysan648@gmail.com>'
 

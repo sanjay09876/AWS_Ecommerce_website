@@ -484,6 +484,13 @@ mark,
   height: auto;
 }
 
+.full-width-banner {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
