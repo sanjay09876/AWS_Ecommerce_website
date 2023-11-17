@@ -1,6 +1,5 @@
 # GreatKart-Django Ecommerce App - Using AWS
 
-Video Demo : https://youtu.be/Rr4EOIpiMnM
 
 GreatKart is an E-commerce Application built using the Python Django 3.1 and AWS
 
