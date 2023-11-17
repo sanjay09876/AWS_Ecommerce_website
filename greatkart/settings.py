@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -25,9 +26,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 
 
-SECRET_KEY = '9%u8&%6osr^gghji$@8j!(o6-an_93350g)xg84&d2u&=+992_'
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False # True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['django-project-env.eba-ggcs4vqy.ca-central-1.elasticbeanstalk.com','*']
 
@@ -162,9 +163,9 @@ USE_TZ = True
 # ]
 
 # AWS S3 Static Files Configuration
-AWS_ACCESS_KEY_ID = 'AKIAQ6MACJ5V5WE23RJY'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'sandjangobucket'
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY =config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
@@ -194,10 +195,10 @@ MESSAGE_TAGS = {
 
 # SMTP configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "sanjaysan648@gmail.com"
-EMAIL_HOST_PASSWORD = 'chtb bxsf esoh xjwv'
-DEFAULT_FROM_EMAIL = 'Team CloudKart <sanjaysan648@gmail.com>'
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT', cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
